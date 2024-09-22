@@ -1,5 +1,7 @@
 <script setup>
 import Calcalator from './components/Calculator.vue'
+import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
 
 </script>
 
@@ -24,8 +26,7 @@ import Calcalator from './components/Calculator.vue'
   <main>
     <TheWelcome />
   </main>
-</template> -->
-<!-- 
+</template>
 
 <style scoped>
 header {

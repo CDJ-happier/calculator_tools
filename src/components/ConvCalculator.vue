@@ -1,8 +1,11 @@
 <template>
   <div>
     <h2>卷积层输出特征大小计算器</h2>
+    <div>
+      \( \text{y} = \frac{\text{x} + 2 \cdot \text{p} - \text{d} \cdot (\text{k} -1) - 1 }{\text{s}} + 1 \)
+    </div>
     <label>
-      输入大小 H/W:
+      输入大小(x):
       <input
         type="number"
         v-model="inputSize"
@@ -10,7 +13,7 @@
       />
     </label>
     <label>
-      卷积核大小 (K):
+      卷积核大小(k):
       <input
         type="number"
         v-model="kernelSize"
@@ -18,18 +21,18 @@
       />
     </label>
     <label>
-      步长 (S):
+      步长(s):
       <input type="number" v-model="stride" placeholder="步长" />
     </label>
     <label>
-      填充 (P):
+      填充(p):
       <input type="number" v-model="padding" placeholder="填充大小" />
     </label>
     <label>
-      膨胀 (D):
+      膨胀(d):
       <input type="number" v-model="dilation" placeholder="膨胀大小" />
     </label>
-    <h3 v-if="outputSize !== null">输出大小: {{ outputSize }}</h3>
+    <h3 v-if="outputSize !== null">输出大小(y): {{ outputSize }}</h3>
   </div>
 </template>
 
@@ -38,9 +41,9 @@ import { ref, computed } from "vue";
 
 export default {
   setup() {
-    const inputSize = ref(0);
-    const kernelSize = ref(0);
-    const padding = ref(0);
+    const inputSize = ref(512);
+    const kernelSize = ref(3);
+    const padding = ref(1);
     const stride = ref(1);
     const dilation = ref(1);
 
@@ -58,6 +61,7 @@ export default {
       kernelSize,
       padding,
       stride,
+      dilation,
       outputSize,
     };
   },

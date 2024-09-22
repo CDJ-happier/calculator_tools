@@ -26,9 +26,9 @@ import BloomFilterCalculator from "./BloomFilterCalculator.vue";
     flex: 1; /* 每个计算器平分容器宽度 */
     margin: 10px; /* 外边距以增加组件之间的间距 */
     max-width: 500px; /* 限制组件最大宽度 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
     padding: 20px; /* 内边距 */
-    background-color: #f9f9f9; /* 背景颜色 */
+    background-color: #ffffff; /* 背景颜色 */
     border-radius: 8px; /* 圆角 */
 }
 </style>

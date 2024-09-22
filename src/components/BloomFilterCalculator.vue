@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2>布隆过滤器参数m和k的计算</h2>
-    <div> m = -n*ln(p)/(ln2 * ln2) </div>
-    <div> k = ln2 * m/n </div>
+    <h2>布隆过滤器参数 \( m \) 和 \( k \) 的计算</h2>
+    <div> \( m = -\frac{n \cdot \ln(p)}{(\ln(2))^2} \) </div>
+    <div> \( k = \ln(2) \cdot \frac{m}{n} \) </div>
     <label>
-      预期要插入的数据量 n:
+      预期要插入的数据量(n):
       <input
         type="number"
         v-model="n"
@@ -12,15 +12,15 @@
       />
     </label>
     <label>
-      预期的错误率 p (e.g., 0.01):
+      预期的错误率(p) e.g., 0.01:
       <input
         type="number"
         v-model="p"
         placeholder="错误率p"
       />
     </label>
-    <h3 v-if="m !== null">布隆过滤器bitsize: {{ m }}</h3>
-    <h3 v-if="k !== null">布隆过滤器hash个数: {{ k }}</h3>
+    <h3 v-if="m !== null">布隆过滤器bitsize(m): {{ m }}</h3>
+    <h3 v-if="k !== null">布隆过滤器hash个数(k): {{ k }}</h3>
   </div>
 </template>
 
