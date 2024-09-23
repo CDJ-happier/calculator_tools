@@ -6,13 +6,16 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <main>
+  <main class="container">
     <Calcalator />
   </main>
 </template>
 
 <style scoped>
-
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
 </style>
 <!-- <template>
   <header>

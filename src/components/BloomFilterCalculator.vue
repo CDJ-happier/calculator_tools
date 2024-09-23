@@ -19,8 +19,8 @@
         placeholder="错误率p"
       />
     </label>
-    <h3 v-if="m !== null">布隆过滤器bitsize(m): {{ m }}</h3>
-    <h3 v-if="k !== null">布隆过滤器hash个数(k): {{ k }}</h3>
+    <h3 v-if="m !== null">bitsize(m): {{ m }}</h3>
+    <h3 v-if="k !== null">hash个数(k): {{ k }}</h3>
   </div>
 </template>
 
